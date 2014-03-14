@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Syria Data Discussion</title>
+		<link type = "text/css" rel = "stylesheet" href = "style.css"/>
+		<link rel = "icon" type = "image/ico" href="logo.ico"/>
+		<!-- Prevents Mobile Device from Shrinking Text -->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>				
+		<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>	
+		<body>
+		<div id = "top">
+			<div id = "ribbon">
+				<div class = "option"><a href="index.html"><div class = "option-text-unselected">Home</div></a></div>
+				<div class = "option"><a href="view.php"><div class = "option-text-selected disappear-on-resize">View Data</div><div class = "option-text-selected appear-on-resize">View</div></a></div>
+				<div class = "option"><a href="submit.html"><div class = "option-text-unselected disappear-on-resize">Submit Data</div><div class = "option-text-unselected appear-on-resize">Submit</div></a></div>
+				<div class = "option"><a href="http://www.syriadatadiscussion.info/phpbb"><div class = "option-text-unselected disappear-on-resize">Discuss Data</div><div class = "option-text-unselected appear-on-resize">Discuss</div></a></div>
+				<div class = "option"><a href="about.html"><div class = "option-text-unselected">About</div></a></div>
+			</div>
+		</div>
+		<div id = "middle">
+			<div id = "content">
+			<p>You do not need to register to submit new or updated information about Syria data.  Please only provide links to data that is publicly available.</p>
+			
+			<form action="insert.php" method="post">
+				
+				<!--Title-->
+				<div class = "submit-part">
+					<div class = "submit-question"><b>Title: </b>What is the name of this dataset?</div>
+					<input type="text" name="title" value="" required="" placeholder="Example: Global Data on Events, Location and Tone (GDELT)" maxlength="100">
+				</div>
+				
+				<!--Source-->
+				<div class = "submit-part">
+					<div class = "submit-question"><b>Source: </b>What individual, organization, or government provides this data?</div>
+					<input type="text" name="source" value="" required="" placeholder="Example: United Nations Office for the Coordination of Humanitarian Affairs" maxlength="100">
+				</div>
+				
+				<!--Hyperlink-->
+				<div class = "submit-part">
+					<div class = "submit-question"><b>Hyperlink: </b>What is the web-address for this dataset?</div>
+					<input type="text" name="hyperlink" value="" required="" placeholder="Example: 'http://data.worldbank.org/country/syrian-arab-republic'" maxlength="100">
+				</div>
+				
+				<!--Location-->
+				<div class = "submit-part">
+					<div class = "submit-question"><b>Location: </b>Click which countries this pertains to.</div>
+					<input type="checkbox" name = "location" id = "submit-Egypt"><label for="submit-Egypt" onclick="">Egypt</label>
+					<input type="checkbox" name = "location" id = "submit-Iran"><label for="submit-Iran" onclick="">Iran</label>	
+					<input type="checkbox" name = "location" id = "submit-Iraq"><label for="submit-Iraq" onclick="">Iraq</label>	
+					<input type="checkbox" name = "location" id = "submit-Israel"><label for="submit-Israel" onclick="">Israel</label>	
+					<input type="checkbox" name = "location" id = "submit-Jordan"><label for="submit-Jordan" onclick="">Jordan</label>
+					<input type="checkbox" name = "location" id = "submit-Lebanon"><label for="submit-Lebanon" onclick="">Lebanon</label>
+					<input type="checkbox" name = "location" id = "submit-Qatar"><label for="submit-Qatar" onclick="">Qatar</label>
+					<input type="checkbox" name = "location" id = "submit-Regional"><label for="submit-Regional" onclick="">Regional</label>	
+					<input type="checkbox" name = "location" id = "submit-Russia"><label for="submit-Russia" onclick="">Russia</label>	
+					<input type="checkbox" name = "location" id = "submit-SaudiArabia"><label for="submit-SaudiArabia" onclick="">Saudi Arabia</label>	
+					<input type="checkbox" name = "location" id = "submit-Syria"><label for="submit-Syria" onclick="">Syria</label>
+					<input type="checkbox" name = "location" id = "submit-Turkey"><label for="submit-Turkey" onclick="">Turkey</label>	
+					<input type="checkbox" name = "location" id = "submit-USA"><label for="submit-USA" onclick="">USA</label>	
+				</div>
+			
+				<!--Theme-->
+				<div class = "submit-part">
+					<div class = "submit-question"><b>Theme: </b>Click what the data is about.</div>
+					<input type="checkbox" name = "theme" id = "submit-Agriculture"><label for="submit-Agriculture" onclick="">Agriculture</label>
+					<input type="checkbox" name = "theme" id = "submit-Baseline"><label for="submit-Baseline" onclick="">Baseline</label>
+					<input type="checkbox" name = "theme" id = "submit-CampManagement"><label for="submit-CampManagement" onclick="">Camp Management</label>	
+					<input type="checkbox" name = "theme" id = "submit-Conflict"><label for="submit-Conflict" onclick="">Conflict</label>	
+					<input type="checkbox" name = "theme" id = "submit-DamageAssesment"><label for="submit-DamageAssesment" onclick="">Damage Assesment</label>	
+					<input type="checkbox" name = "theme" id = "submit-Food"><label for="submit-Food" onclick="">Food</label>
+					<input type="checkbox" name = "theme" id = "submit-Economy"><label for="submit-Economy" onclick="">Economy</label>
+					<input type="checkbox" name = "theme" id = "submit-Health"><label for="submit-Health" onclick="">Health</label>
+					<input type="checkbox" name = "theme" id = "submit-HumanitarianAssistance"><label for="submit-HumanitarianAssistance" onclick="">Humanitarian Assistance</label>	
+					<input type="checkbox" name = "theme" id = "submit-HumanRights"><label for="submit-HumanRights" onclick="">Human Rights</label>	
+					<input type="checkbox" name = "theme" id = "submit-Infrastructure"><label for="submit-Infrastructure" onclick="">Infrastructure</label>	
+					<input type="checkbox" name = "theme" id = "submit-IDP"><label for="submit-IDP" onclick="">Internally Displaced Persons</label>
+					<input type="checkbox" name = "theme" id = "submit-LocalCouncils"><label for="submit-LocalCouncils" onclick="">Local Councils</label>
+					<input type="checkbox" name = "theme" id = "submit-NeedsAssessment"><label for="submit-NeedsAssessment" onclick="">Needs Assessment</label>
+					<input type="checkbox" name = "theme" id = "submit-Nutrition"><label for="submit-Nutrition" onclick="">Nutrition</label>	
+					<input type="checkbox" name = "theme" id = "submit-Protection"><label for="submit-Protection" onclick="">Protection</label>	
+					<input type="checkbox" name = "theme" id = "submit-Refugees"><label for="submit-Refugees" onclick="">Refugees</label>	
+					<input type="checkbox" name = "theme" id = "submit-Shelter"><label for="submit-Shelter" onclick="">Shelter</label>
+					<input type="checkbox" name = "theme" id = "submit-ZonesOfControl"><label for="submit-ZonesOfControl" onclick="">Zones Of Control</label>
+				</div>
+				
+				<!--Format-->
+				<div class = "submit-part">
+					<div class = "submit-question"><b>Format: </b>Select the format of the data.</div>
+					<input type="checkbox" name = "format" id = "submit-CSV"><label for="submit-CSV" onclick="">CSV</label>
+					<input type="checkbox" name = "format" id = "submit-Facebook"><label for="submit-Facebook" onclick="">Facebook</label>	
+					<input type="checkbox" name = "format" id = "submit-GDB"><label for="submit-GDB" onclick="">Geodatabase</label>
+					<input type="checkbox" name = "format" id = "submit-JPG"><label for="submit-JPG" onclick="">JPG</label>	
+					<input type="checkbox" name = "format" id = "submit-Map"><label for="submit-Map" onclick="">Map on Website</label>
+					<input type="checkbox" name = "format" id = "submit-Word"><label for="submit-Word" onclick="">Microsoft Word Document</label>	
+					<input type="checkbox" name = "format" id = "submit-PDF"><label for="submit-PDF" onclick="">PDF</label>	
+					<input type="checkbox" name = "format" id = "submit-PNG"><label for="submit-PNG" onclick="">PNG</label>
+					<input type="checkbox" name = "format" id = "submit-SHP"><label for="submit-SHP" onclick="">Shapefile</label>
+					<input type="checkbox" name = "format" id = "submit-Table"><label for="submit-Table" onclick="">Table on Website</label>
+					<input type="checkbox" name = "format" id = "submit-TIFF"><label for="submit-TIFF" onclick="">TIFF</label>
+					<input type="checkbox" name = "format" id = "submit-Twitter"><label for="submit-Twitter" onclick="">Twitter</label>	
+					<input type="checkbox" name = "format" id = "submit-XML"><label for="submit-XML" onclick="">XML</label>	
+				</div>
+				
+				<!--Frequency-->
+				<div class = "submit-part">
+					<div class = "submit-question"><b>Frequency: </b>How often is the data updated?</div>
+					<input type="radio" id = "submit-Realtime" name = "submit-frequency"><label for="submit-Realtime" onclick="">Realtime</label>
+					<input type="radio" id = "submit-Minutely"name = "submit-frequency"><label for="submit-Minutely" onclick="">Minutely</label>
+					<input type="radio" id = "submit-Hourly" name = "submit-frequency"><label for="submit-Hourly" onclick="">Hourly</label>	
+					<input type="radio" id = "submit-Daily" name = "submit-frequency"><label for="submit-Daily" onclick="">Daily</label>	
+					<input type="radio" id = "submit-Weekly" name = "submit-frequency"><label for="submit-Weekly" onclick="">Weekly</label>	
+					<input type="radio" id = "submit-Bi-Weekly" name = "submit-frequency"><label for="submit-Bi-Weekly" onclick="">Bi-Weekly</label>
+					<input type="radio" id = "submit-Monthly" name = "submit-frequency"><label for="submit-Monthly" onclick="">Monthly</label>
+					<input type="radio" id = "submit-Quarterly" name = "submit-frequency"><label for="submit-Quarterly" onclick="">Quarterly</label>
+					<input type="radio" id = "submit-Bi-Annually" name = "submit-frequency"><label for="submit-Yearly" onclick="">Bi-Annually</label>	
+					<input type="radio" id = "submit-Yearly" name = "submit-frequency"><label for="submit-Yearly" onclick="">Annually</label>	
+					<input type="radio" id = "submit-Decennially" name = "submit-frequency"><label for="submit-Decennially" onclick="">Decennially</label>	
+					<input type="radio" id = "submit-AsNeeded" name = "submit-frequency"><label for="submit-AsNeeded" onclick="">As Needed</label>
+					<input type="radio" id = "submit-Irregular" name = "submit-frequency"><label for="submit-Unknown" onclick="">Irregular</label>
+					<input type="radio" id = "submit-NotPlanned" name = "submit-frequency"><label for="submit-NotPlanned" onclick="">Not Planned</label>
+					<input type="radio" id = "submit-Unknown" name = "submit-frequency"><label for="submit-Unknown" onclick="">Unknown</label>
+				</div>
+				
+				<!--Strengths-->
+				<div class = "submit-part">
+					<div class = "submit-question"><b>Strengths: </b>What are the strengths of the data?</div>
+					<textarea name="submit-strengths" value="" required="" placeholder="Example: This data is extremely thorough and consists of over 100 economic indicators." maxlength="100"></textarea>
+				</div>
+				
+				<!--Weaknesses-->
+				<div class = "submit-part">
+					<div class = "submit-question"><b>Weaknesses: </b>What are the weaknesses of the data?</div>
+					<textarea name="submit-weaknesses" value="" required="" placeholder="Example: This data is only collected every year and hasn't been collected since 2011." maxlength="100"></textarea>
+				</div>		
+				
+				<!--Submit and Reset-->
+				<div class = "submit-part">
+					<div class = "submit-button" id ="submit-button-submit"> <input type="submit" value="submit"> </div>
+					<div class = "submit-button" id="submit-button-reset"> <input type="reset" value="reset"> </div>
+				</div>
+			
+			</form>
+		</div>
+		<div id = "bottom">
+			<div id = "disclaimer">Disclaimer: Syria Data Discussion and its staff do not necessarily endorse any views expressed on this site or any other.  Syria Data Discussion and its staff do not guarantee the personal safety or cyber security of those that visit this website or any other.</div>
+		</div>
+	</body>
+</html>
